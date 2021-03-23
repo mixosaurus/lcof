@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# 解决方案文件
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+
 # User-specific files
 *.rsuser
 *.suo
