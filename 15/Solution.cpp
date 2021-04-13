@@ -12,11 +12,10 @@ int Solution::hammingWeight(uint32_t n) {
 	n = (n & 0x55555555) + ((n >> 1) & 0x55555555);
 	n = (n & 0x33333333) + ((n >> 2) & 0x33333333);
 	n = (n & 0x0f0f0f0f) + ((n >> 4) & 0x0f0f0f0f);
-	cout << *(new bitset<32>(n)) << endl;
 	//此时整个序列已被分割位4组，每组长度为8
 	//将4个组直接相加到最左8位
 	n = (n << 24) + (n << 16) + (n << 8) + n;
-	cout << *(new bitset<32>(n)) << endl;
+	//取左侧8位
 	n = n >> 24;
 	return n;
 }
