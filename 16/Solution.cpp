@@ -21,6 +21,7 @@ double Solution::myPow(double x, int n) {
     }
 }
 
+//递归实现
 double Solution::powWithRecursion(double x, int n) {
     if (x == 1 || n ==0) {
         return 1.0;
@@ -35,8 +36,9 @@ double Solution::powWithRecursion(double x, int n) {
     }
 }
 
+
+//迭代实现
 double Solution::powWithLoop(double x, int n) {
-    //迭代实现
     //将指数拆分为多个2的幂数之和，如求 x^77：
     //77=64+8+4+1，其中64、8、4、1皆为2的幂数（1为2的零次幂）
     //x^(77d(0b1001101))
